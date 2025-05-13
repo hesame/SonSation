@@ -1,0 +1,100 @@
+.main-intro-wrapper {
+    padding: 8vh 4vw;
+    max-width: 1024px;
+    margin: 0 auto;
+    color: #222;
+    overflow-x: hidden;
+}
+
+.intro-header {
+    text-align: center;
+    margin-bottom: 8vh;
+}
+
+.intro-logo {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1vh;
+}
+
+.intro-logo .quote {
+    color: #4caf50;
+}
+
+.intro-title {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1vh;
+}
+
+.intro-subtitle {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 3vh;
+}
+
+.intro-start-button {
+    background-color: #4caf50;
+    color: white;
+    font-size: 1.1rem;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.intro-start-button:hover {
+    background-color: #43a047;
+}
+
+/* 🔽 Feature Blocks */
+.features-section {
+    display: flex;
+    flex-direction: column;
+    gap: 6vh;
+}
+
+.feature-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4vw;
+    flex-wrap: wrap;
+    border-radius: 16px;
+    padding: 2rem;
+    background-color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.feature-block:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* 텍스트 */
+.feature-text-left,
+.feature-text-right {
+    flex: 1;
+    min-width: 280px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.feature-block:hover .feature-text-left,
+.feature-block:hover .feature-text-right {
+    transform: translateY(-4px);
+    color: #222;
+}
+
+/* 이미지 애니메이션 */
+.feature-image {
+    width: 300px;
+    border-radius: 16px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease;
+}
+
+.feature-block:hover .feature-image {
+    transform: scale(1.05) rotate(1.2deg);
+}

@@ -1,0 +1,144 @@
+/* 전체 페이지 컨테이너 */
+.category-wrapper {
+    padding: 4vh 2vw;
+    max-width: 1200px;
+    margin: 0 auto;
+    color: #222;
+}
+
+/* 제목 */
+.category-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #4caf50;
+}
+
+/* 탭 버튼 */
+.category-tabs .nav-link {
+    font-size: 1.1rem;
+    color: #555;
+    font-weight: 500;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 25px;
+    transition: all 0.3s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 👉 기본 그림자 */
+}
+
+.category-tabs .nav-link.active {
+    background-color: #4caf50;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* 👉 활성 탭 강조 */
+}
+
+.category-tabs .nav-link:hover {
+    background-color: #e8f5e9;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+.category-tabs .nav-tabs {
+    border-bottom: none !important;
+}
+/* 카드 */
+.category-card {
+    border-radius: 16px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08); /* 기본 그림자 추가 */
+}
+
+.category-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12); /* hover 시 강조 */
+}
+
+/* 썸네일 비디오 영역 */
+.category-video-thumbnail {
+    position: relative;
+    padding-top: 56.25%;
+    background-color: #f0f0f0;
+    cursor: pointer;
+}
+
+.category-video-thumbnail video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 재생 아이콘 */
+.play-icon {
+    position: relative;
+    z-index: 3;
+    fill: white;
+    width: 48px;
+    height: 48px;
+}
+
+/* 재생시간 표시 */
+.video-duration {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    font-size: 0.8rem;
+    padding: 0.3rem 0.6rem;
+    border-radius: 8px;
+}
+
+/* 카드 내부 텍스트 */
+.category-card .card-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+}
+
+.category-card .card-text {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+/* 카드 푸터 */
+.category-card-footer {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    padding: 0.5rem 1rem 1rem;
+}
+
+/* watch 버튼 */
+.watch-button {
+    background: none;
+    border: none;
+    color: #1b5e20;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 0;
+}
+
+.watch-button:hover {
+    color: #43a047;
+}
+
+/* 반응형 */
+@media (max-width: 768px) {
+    .category-title {
+        font-size: 2rem;
+    }
+
+    .category-tabs .nav-link {
+        font-size: 1rem;
+        padding: 0.4rem 1rem;
+    }
+
+    .category-card .card-title {
+        font-size: 1rem;
+    }
+}

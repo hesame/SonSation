@@ -1,0 +1,62 @@
+/* 사이드바 전체 영역 */
+.sidebar-wrapper {
+    position: fixed;
+    top: 0;
+    left: -320px;
+    height: 100vh;
+    width: 320px;
+    transition: left 0.4s ease;
+    z-index: 1000;
+}
+
+/* 열렸을 때 */
+.sidebar-wrapper.open {
+    left: 0;
+}
+
+/* 유리 느낌 배경 + 스타일 */
+.sidebar-glass {
+    height: 100%;
+    width: 100%;
+    padding: 2rem 1.5rem;
+    box-sizing: border-box;
+
+    backdrop-filter: blur(12px);
+    background: rgba(28, 28, 30, 0.7);
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 4px 0 12px rgba(0, 0, 0, 0.2);
+
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 항목 리스트 */
+.sidebar-glass ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 2rem;
+    line-height: 2;
+    font-size: 1.1rem;
+}
+
+/* 항목 호버 스타일 */
+.sidebar-glass li {
+    cursor: pointer;
+    transition: color 0.2s;
+}
+.sidebar-glass li:hover {
+    color: #a4ffae;
+}
+
+/* 닫기 버튼 */
+.close-btn {
+    align-self: flex-end;
+    font-size: 2rem;
+    border: none;
+    background: none;
+    color: white;
+    cursor: pointer;
+}

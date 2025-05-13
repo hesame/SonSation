@@ -1,0 +1,280 @@
+/* RESET + BASE */
+html,
+body,
+#root {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100vh;
+    font-family: 'Pretendard', sans-serif;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+
+.app-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.main-navbar {
+    height: 10vh;
+    background: #1c1c1e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 2vw;
+}
+.navbar-content {
+    width: 100%;
+    max-width: 1280px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.hamburger-icon {
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+.site-logo {
+    font-size: 2.4vh;
+    font-weight: bold;
+    color: white;
+}
+.site-logo .quote {
+    color: #4caf50;
+}
+.footer-info {
+    height: 50px;
+    background-color: #4caf50;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 14px;
+    flex-shrink: 0;
+}
+
+/* VIDEO AREA */
+.video-mode-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    position: relative;
+}
+.learn-buttons {
+    display: flex;
+    align-items: flex-start;
+}
+
+.learn-buttons,
+.webcam-toggle-area {
+    display: flex;
+    gap: 10px;
+    margin: 20px 0;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.learn-buttons button,
+.webcam-toggle-button {
+    background-color: #4caf50;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 20px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15); /* 👉 입체감 추가 */
+}
+
+.learn-buttons button:hover,
+.webcam-toggle-button:hover {
+    background-color: #388e3c;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* 👉 hover 시 더 깊은 그림자 */
+}
+
+.learn-buttons button:hover,
+.webcam-toggle-button:hover {
+    background-color: #388e3c;
+}
+
+.learn-video-area {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 20px;
+}
+
+.video-box,
+.guide-box {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+    max-width: 550px;
+    width: 100%;
+}
+.video-box.guide-align {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.video-box video,
+.video-content,
+.responsive-guide-video {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    background-color: black;
+}
+
+.webcam-off-placeholder {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: white;
+    background-color: black;
+    border-radius: 8px;
+}
+
+.video-description {
+    text-align: center;
+    margin-top: 12px;
+    font-size: 15px;
+    line-height: 1.6;
+    background-color: #f8f9fa;
+    padding: 12px 16px;
+    border-radius: 8px;
+    border-left: 5px solid #4caf50;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    color: #222;
+    white-space: pre-line;
+}
+.video-source {
+    font-size: 12px;
+    color: #555;
+    margin-top: 4px;
+    text-align: center;
+}
+
+.video-title {
+    font-weight: bold;
+    margin-bottom: 8px;
+    margin-left: 48%;
+}
+
+.responsive-guide-video {
+    margin-left: 10%;
+    width: 80%;
+    height: 240px;
+    border-radius: 8px;
+    background-color: #000;
+}
+
+.pip-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.pip-video {
+    width: 100%;
+    height: 100%;
+}
+
+.pip-close-button-wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 6px;
+    z-index: 10;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.pip-close-button {
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 22px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+    .learn-video-area {
+        grid-template-columns: 1fr;
+    }
+
+    .video-box,
+    .guide-box {
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    .learn-buttons,
+    .webcam-toggle-area {
+        justify-content: center;
+    }
+
+    .learning-tip {
+        width: 90%;
+    }
+}
+
+.learning-tip {
+    background: #f1f8e9;
+    border-left: 6px solid #4caf50;
+    padding: 16px;
+    border-radius: 12px;
+    color: #333;
+    font-size: 14px;
+    max-width: 800px;
+    width: 100%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
+}
+
+.learning-tip h3 {
+    margin-bottom: 12px;
+    color: #2e7d32;
+    font-size: 18px;
+}
+
+.learning-tip ul {
+    padding-left: 20px;
+}
+video,
+canvas {
+    width: 100%;
+    height: auto;
+    display: block;
+}
